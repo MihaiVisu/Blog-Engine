@@ -56,14 +56,16 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'netmag.urls'
 
-TEMPLATE_DIRS = (
-        '~/Documents/Mihai/BlogEngine/netmag/netmag/templates',
-    )
+STATICFILES_DIRS = (
+    '~/Documents/Mihai/BlogEngine/netmag/netmag/static/', 
+)
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR,'netmag/templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
